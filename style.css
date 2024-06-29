@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #FEF5E2;
+}
+
+.inputText{
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 10%;
+    top: 15%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #FEF5E2;
+
+}
+.inputText::placeholder{
+    color: #0A3871;
+}
+
+.inputText:focus,
+.inputText:active{
+    border: none;
+    outline: none;
+}
+
+.terminos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 80%;
+}
+
+.terminos p{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1px 0;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 82%;
+}
+
+.btn-encriptar{
+    /*height: 50px;
+    border: none;
+    */
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;    
+    color: #FFFFFF;
+}
+
+.btn-desencriptar{
+    /*height: 50px;
+    */
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #0A3871;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background: #D8DFE8;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;    
+    color: #0A3871;
+}
