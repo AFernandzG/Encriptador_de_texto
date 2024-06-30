@@ -7,14 +7,14 @@ const llaves = {
 };
 
 function encriptar() {
-    const inputText = document.getElementById('inputText').value.toLowerCase();
+    const inputText = document.getElementById('izqu-ingr-text').value.toLowerCase();
     const regex = new RegExp(Object.keys(llaves).join('|'), 'g');
     const encriptado = inputText.replace(regex, letra => llaves[letra] || letra);
-    document.getElementById('output').textContent = encriptado;
+    document.getElementById('titulo-mensaje').textContent = encriptado;
 }
 
 function desencriptar() {
-    const inputText = document.getElementById('inputText').value.toLowerCase();
+    const inputText = document.getElementById('izqu-ingr-text').value.toLowerCase();
     // Invertir el arreglo para la desencriptacion
     const inverso = {};
     for (const key in llaves) {
@@ -22,5 +22,5 @@ function desencriptar() {
     }
     const regex = new RegExp(Object.values(llaves).join('|'), 'g');
     const desencriptado = inputText.replace(regex, letra => inverso[letra] || letra);
-    document.getElementById('output').textContent = desencriptado;
+    document.getElementById('titulo-mensaje').textContent = desencriptado;
 }
