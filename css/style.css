@@ -9,13 +9,14 @@
     --color-sext: #FEF5E2;
     --color-background: #F3F5FC;
 
+    --font-regular: 400;
+
     --font-famy: "Inter", sans-serif;
     --background--color: var(--color-sext);
 }
 body{
     background: var(--background--color);
 }
-
 .header {
     width: 90%;
     margin: auto;
@@ -28,10 +29,9 @@ body{
     margin: auto 40px auto auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    min-height: calc(100vh - (91px + 72px)); /* calc(100vh -91px -72px); */
+    min-height: calc(100vh - (91px + 72px + 30px));
     align-items: end;
 }
-
 .izquierda {
     height: 85%;
     display: flex;
@@ -44,7 +44,7 @@ body{
     font-size: 32px;
     color: var(--color-prima);
     font-family: var(--font-famy);
-    font-weight: 400;
+    font-weight: var(--font-regular);
     background: none;
     border: none;
     outline: none;
@@ -53,6 +53,12 @@ body{
 .izqu__term__info{
     font-size: 12px;
     color: var(--color-cuart);
+}
+.izqu__terminos {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
 }
 .izqu__ingr__text::placeholder{
     color: var(--color-prima);
@@ -75,7 +81,7 @@ body{
     border-radius: 24px;
     font-family: var(--font-famy);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: var(--font-regular);
 }
 .btn__encriptar {
     background-color: var(--color-prima);
@@ -123,13 +129,13 @@ body{
 .mensaje__final.ajustar {
     color: var(--color-cuart);
     text-align: left;
-    font-weight: 400;
+    font-weight: var(--font-regular);
     height: 80%;
 }
 .der__info {
     font-size: 16px;
     font-family: var(--font-famy);
-    font-weight: 400;
+    font-weight: var(--font-regular);
     text-align: center;
     color: var(--color-cuart);
 }
@@ -141,27 +147,25 @@ body{
 }
 .footer {
     background-color: var(--color-background);
-    height: 50px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items:start;
-    margin-top: 15px;
+    margin-top: 40px;
     padding: 10px;
     border-top: 2px solid var(--color-prima);
 }
 .footer__text {
-/*     height: 90%;
-    width: 80%;
- */    font-family: var(--font-famy);
-/*     background: #778ca5;
- */    display: flex;
+    font-family: var(--font-famy);
+    display: flex;
     justify-content: start;
     align-items: center;
     color: var(--color-quint);
     text-align: center;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: var(--font-regular);
+    font-style: italic;
     gap: 30px;
 }
 @media screen and (max-width: 825px) {
@@ -170,7 +174,9 @@ body{
         grid-template-rows: 75% auto;
         width: auto;
         margin: auto 40px;
-    /*     min-height: 120vh; */
+    }
+    .izquierda {
+        margin-bottom: 64px;
     }
     .izqu__ingr__text {
         width: 100%;
